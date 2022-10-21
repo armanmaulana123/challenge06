@@ -1,12 +1,12 @@
 /**
  * @file Manages database connection configuration.
- * @author Fikri Rahmat Nurhidayat
+ * @author Kelompok 4 - FSW 2
  */
 
 /** Destruct environment variable to get database configuration */
 const {
   DB_USERNAME = "postgres",
-  DB_PASSWORD = "1320",
+  DB_PASSWORD = "G00dg4m32_",
   DB_HOST = "127.0.0.1",
   DB_NAME = "challenge_6",
 } = process.env;
