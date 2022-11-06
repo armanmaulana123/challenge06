@@ -17,6 +17,7 @@ apiRouter.get(
   controllers.api.v1.authController.authorize,
   controllers.api.v1.authController.whoAmI
 );
+apiRouter.post("/api/v1/google", handleGoogleLoginOrRegister);
 apiRouter.post("/api/v1/login", controllers.api.v1.authController.login);
 apiRouter.post("/api/v1/register", controllers.api.v1.authController.register);
 apiRouter.get('/api/v1/user', controllers.api.v1.authController.validationSuperAdmin, controllers.api.v1.authController.listUser);
