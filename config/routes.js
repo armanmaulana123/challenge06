@@ -1,12 +1,15 @@
 const express = require("express");
 const controllers = require("../app/controllers");
+const handleGoogleLoginOrRegister = require("../app/controllers/api/v1/handleGoogleLoginOrRegister")
+const cors = require('cors')
 
 const apiRouter = express.Router();
 
 // Open API
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const swaggerDocument = YAML.load('./bloggingAPI.yaml');
+const swaggerDocument = YAML.load('./CarAPI.yaml');
+apiRouter.use(cors())
 apiRouter.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /**
